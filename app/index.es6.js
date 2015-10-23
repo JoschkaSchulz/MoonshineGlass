@@ -13,7 +13,7 @@ app.on('window-all-closed', () => {
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
-        width: 1400,
+        width: 330,
         height: 600
     });
     mainWindow.loadUrl('file://' + __dirname + '/../browser/index.html');

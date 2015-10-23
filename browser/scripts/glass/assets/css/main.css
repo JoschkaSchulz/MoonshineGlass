@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+  color: orange;
+  font-family: monospace;
+}
+
+a {
+  color: white;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.seperator {
+  color: white;
+}
+
+.event-box {
+  border-bottom: 1px dashed darkgrey;
+  width: 280px;
+  padding: 10px;
+  margin: 0px;
+  list-style: none;
+}

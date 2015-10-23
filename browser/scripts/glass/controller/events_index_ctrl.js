@@ -18,7 +18,7 @@ class EventsIndexCtrl {
       var plainEvents = response.data.events;
       console.log(plainEvents);
       for (var key in plainEvents) {
-        $scope.events.push(new GlassEvent(plainEvents[key].name, plainEvents[key].id));
+        $scope.events.push(new GlassEvent(plainEvents[key].name, plainEvents[key].id, plainEvents[key].date));
       }
     }, function error() {
       plainEvents;

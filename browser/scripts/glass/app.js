@@ -8,6 +8,7 @@ import { NavigationCtrl } from './controller/navigation_ctrl.js';
 
 // Models
 import { GlassEvent } from './model/event.js';
+import { GlassUser } from './model/user.js';
 
 angular.module('MoonshineGlass', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {

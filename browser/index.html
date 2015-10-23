@@ -7,12 +7,14 @@
     <script>
         System.import('./scripts/glass/app');
     </script>
+    <link rel="stylesheet" type="text/css" href="scripts/glass/assets/css/main.css">
 </head>
     <body>
       <div ng-app="MoonshineGlass">
         <h1>Moonshine Glass</h1>
         <div ng-controller="NavigationCtrl as navigation">
-          <a href="#" ui-sref="events_index">Alle Veranstaltungen</a>
+          <a href="#" ui-sref="events_index">Alle Veranstaltungen</a> <span class="seperator">|</span>
+          <a href="#" ui-sref="events_index">Neu</a>
         </div>
         <hr>
         <div ui-view></div>

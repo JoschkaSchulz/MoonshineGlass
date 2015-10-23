@@ -1,0 +1,7 @@
+<div ng-controller="EventsIndexCtrl as eventCtrl">
+  <ul>
+    <li ng-repeat="event in events">
+      <a ng-click="eventCtrl.showEvent(event.id)">{{event.id}} - {{event.name}}</a>
+    </li>
+  </ul>
+</div>

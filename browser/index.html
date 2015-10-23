@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Electron / Angular / ES6 Sample </title>
+    <title>Moonshine - Glass</title>
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>
@@ -9,15 +9,13 @@
     </script>
 </head>
     <body>
-        <h1>Electron / Angular / ES6 Sample</h1>
-          <div ng-app="MoonshineGlass">
-            <div ng-controller="EventCtrl">
-              <ul>
-                <li ng-repeat="event in events">
-                  {{event.name}}
-                </li>
-              </ul>
-            </div>
+      <div ng-app="MoonshineGlass">
+        <h1>Moonshine Glass</h1>
+        <div ng-controller="NavigationCtrl as navigation">
+          <a href="#" ui-sref="events_index">Alle Veranstaltungen</a>
         </div>
+        <hr>
+        <div ui-view></div>
+      </div>
     </body>
 </html>

@@ -1,0 +1,17 @@
+<div ng-controller="LoginCtrl as loginCtrl">
+  <h1>Login</h1>
+
+  <form novalidate>
+    <div class="label">
+      <input type="text" ng-model="user.email" placeholder="E-Mail" required>
+    </div>
+
+    <div class="label">
+      <input type="password" ng-model="user.password" placeholder="Password">
+    </div>
+
+    <div>
+      <input type="submit" value="Submit" ng-click="loginCtrl.login(user)">
+    </div>
+  </form>
+</div>

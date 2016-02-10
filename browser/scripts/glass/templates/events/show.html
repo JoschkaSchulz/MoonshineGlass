@@ -4,7 +4,12 @@
   <p>Beschreibung:<br>{{event.description}}</p>
   <p>Wer ist dabei?<br>
     <ul>
-      <li ng-repeat="user in event.users">Benutzer {{user.id}}</li>
+      <li ng-repeat="user in event.users">{{user.name}}</li>
     </ul>
   </p>
+
+  <form novalidate>
+    <input ng-if="!eventShow.hasJoined('Thathalas')" type="submit" value="Join" ng-click="eventShow.join()">
+    <input ng-if="eventShow.hasJoined('Thathalas')" type="submit" value="Leave" ng-click="eventShow.leave()">
+  </form>
 </div>

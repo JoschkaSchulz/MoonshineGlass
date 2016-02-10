@@ -11,13 +11,17 @@
 </head>
     <body>
       <div ng-app="MoonshineGlass">
-        <h1>Moonshine Glass</h1>
         <div ng-controller="NavigationCtrl as navigation">
-          <a href="#" ui-sref="events_index">Alle Veranstaltungen</a> <span class="seperator">|</span>
-          <a href="#" ui-sref="events_index">Neu</a>
+          <div ng-if="navigation.isLoggedIn()" class="header">
+            <h1>Moonshine Glass</h1>
+            <a href="#" ui-sref="events_index">Alle Veranstaltungen</a> <span class="seperator">|</span>
+            <a href="#" ui-sref="event_new">Neu</a>
+          </div>
+          <div ng-if="navigation.isLoggedIn()" class="footer">
+            <span>Logged in as <b>{{navigation.currentUser()}}</b>, <a href="#">logout</a></span>
+          </div>
         </div>
-        <hr>
-        <div ui-view></div>
+        <div ui-view class="event-list"></div>
       </div>
     </body>
 </html>

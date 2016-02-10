@@ -5,4 +5,8 @@ class GlassUser {
     this.id = id;
     this.name = name;
   }
+
+  setToken(token) {
+    this.token = token;
+  }
 }

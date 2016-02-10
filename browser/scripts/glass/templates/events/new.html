@@ -1,0 +1,30 @@
+<div ng-controller="EventNewCtrl as eventNew">
+  <h3>Starting a new Event:</h3>
+  <form novalidate>
+    <div class="label">
+      <input type="text" ng-model="event.name" placeholder="Name" required>
+    </div>
+
+    <div class="label">
+      <textarea ng-model="event.description" placeholder="Description"></textarea>
+    </div>
+
+    <div  class="label">
+      <input type="text" class="small-input" ng-model="event.day" placeholder="DD" required>
+        <span>.</span>
+      <input type="text" class="small-input" ng-model="event.month" placeholder="MM" required>
+        <span>.</span>
+      <input type="text" class="small-input-double" ng-model="event.year" placeholder="YYYY" required>
+    </div>
+
+    <div  class="label">
+      <input type="text" class="small-input" ng-model="event.hours" placeholder="HH" required>
+        <span>:</span>
+      <input type="text" class="small-input" ng-model="event.minutes" placeholder="MM" required>
+    </div><br>
+
+    <div>
+      <input type="submit" value="Submit" ng-click="eventNew.saveEvent(event)">
+    </div>
+  </form>
+</div>
